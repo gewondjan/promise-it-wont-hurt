@@ -2,7 +2,7 @@ var catchPromise = new Promise(function (fulfill, reject) {
     reject(new Error('I am an error'));
 });
 
-catchPromise.catch(function(error) {
+catchPromise.catch(function (error) {
     console.log(error.message);
 });
 
@@ -12,6 +12,6 @@ resolvePromise.then(console.log, null);
 
 var rejectPromise = Promise.reject(new Error('Hello I am rejected'));
 
-rejectPromise.then(null, function(error) {
+rejectPromise.then(null, function (error) {
     console.log(error.message);
 });
